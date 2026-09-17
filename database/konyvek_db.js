@@ -151,6 +151,12 @@ views: 1600
 }
 ];
 
+const getKonyvek = () => {
+    return konyvek;
+};
+
+
 module.exports = {
-    konyvek
+    konyvek,
+    getKonyvek,
 };

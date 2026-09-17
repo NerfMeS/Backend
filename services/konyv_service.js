@@ -1,12 +1,16 @@
 const {
     konyvek
-} = require('../database/konyvek_db');
+} = require("../database/konyvek_db")
 
+const getHello = (req, res)=>{
+    res.json({message: "Könyvek backend"})
+}
 
-const getHello = () => {
-    res.json({ message: "könyvek backend" });
+const getKonyvek = (req, res)=>{
+    res.json(konyvek)
 }
 
 module.exports = {
-    getHello
-};
+    getHello,
+    getKonyvek
+}
