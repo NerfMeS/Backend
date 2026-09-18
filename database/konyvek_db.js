@@ -151,22 +151,6 @@ views: 1600
 }
 ];
 
-const getHello = (req, res) => {
-    res.json({ message: "Könyvek backend" });
-}
-
-const getKonyvek = () => {
-    return konyvek;
-};
-
-const getKonyvById = (req, res) => {
-    const simaid = parseInt(req.params.id);
-    const konyv = konyvek.find(konyv => konyv.id === simaid);
-    res.json(konyv)
-};
-
 module.exports = {
-    getHello,
-    getKonyvek,
-    getKonyvById,
+    konyvek
 };
